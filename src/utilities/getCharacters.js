@@ -12,13 +12,9 @@ const characters = [
 const getCharacters = () => {
   const newArray = [];
 
-  for (let i = 0; newArray.length < 5; i++) {
+  while (newArray.length < 5) {
     const randomIndex = Math.floor(Math.random() * characters.length);
     const randomCharacter = characters[randomIndex];
-
-    if (newArray.length === 0) {
-      newArray.push(randomCharacter);
-    }
 
     // Checks to make sure randomCharacter isnt a duplicate
     if (!newArray.some((obj) => obj.name === randomCharacter.name)) {
