@@ -6,7 +6,8 @@ function Cards(props) {
     <div className="card-container">
       {randomChars.map((obj, index) => (
         <div key={index} className="card" onClick={props.onSelection(obj)}>
-          {obj.name}
+          <img src={obj.image} alt=""></img>
+          <p>{obj.name}</p>
         </div>
       ))}
     </div>
