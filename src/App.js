@@ -4,6 +4,7 @@ import Cards from './components/Cards';
 import Scoreboard from './components/Scoreboard';
 import charArr from './utilities/charArr';
 import { useState } from 'react';
+import Footer from './components/Footer';
 
 function App() {
   const [characters, setCharacters] = useState(charArr);
@@ -50,6 +51,8 @@ function App() {
       <Scoreboard score={score} highScore={highScore} />
 
       <Cards getRandomChars={getRandomChars} onSelection={onSelection} />
+
+      <Footer />
 
       <video id="background-video" autoPlay loop muted poster={backgroundImage}>
         <source src={backgroundVideo} type="video/mp4" />
