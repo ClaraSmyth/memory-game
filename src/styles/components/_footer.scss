@@ -1,0 +1,21 @@
+.footer-link {
+  grid-column: span 2;
+  justify-self: end;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.2rem;
+  background-color: white;
+  width: fit-content;
+  padding: 0.2rem 0.8rem;
+  margin: 1rem;
+  border-radius: 100vmax;
+  text-decoration: none;
+  color: black;
+  line-height: 1;
+
+  svg {
+    width: 1.4rem;
+    height: 1.4rem;
+  }
+}
