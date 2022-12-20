@@ -1,5 +1,4 @@
 .footer-link {
-  grid-column: span 2;
   justify-self: end;
   display: flex;
   justify-content: center;
@@ -13,6 +12,7 @@
   text-decoration: none;
   color: black;
   line-height: 1;
+  font-size: var(--fs-400);
 
   svg {
     width: 1.4rem;
