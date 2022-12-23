@@ -25,9 +25,10 @@
 
   img {
     object-fit: cover;
+    object-position: top;
     border-radius: 0.8rem;
     width: 100%;
-    aspect-ratio: 1;
+    aspect-ratio: 1 / 1.2;
   }
 
   p {
