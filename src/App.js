@@ -34,7 +34,7 @@ function App() {
 
     const newArray = [];
 
-    while (newArray.length < 8) {
+    while (newArray.length < 4) {
       if (arr1.length) newArray.push(arr1.pop());
       if (arr2.length) newArray.push(arr2.pop());
     }
