@@ -1,9 +1,13 @@
 .card-container {
+  justify-self: center;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
   justify-items: center;
   align-items: center;
+  max-width: 87.5rem;
+  width: 100%;
+  margin-bottom: 4rem;
 }
 
 .card {
@@ -12,7 +16,7 @@
   align-items: center;
   width: 12rem;
   aspect-ratio: 1;
-  background-color: hsl(0 0% 90% / 1);
+  background-color: var(--bg-transparent);
   padding: 0.8rem;
   border-radius: 1rem;
   cursor: pointer;
