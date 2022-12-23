@@ -10,20 +10,13 @@ function App() {
   const [score, setScore] = useState(0);
   const [highScore, setHighScore] = useState(0);
 
-  const onSelection = (obj) => (e) => {
-    e.preventDefault();
+  const onSelection = (obj) => {
+    // Check if game should be reset
+    const reset = selected.some((object) => object.name === obj.name);
 
-    // If the selection already exists reset game
-    if (selected.some((object) => object.name === obj.name)) {
-      setScore(0);
-      setSelected([]);
-      setCharacters(charArr);
-      return;
-    }
-
-    setScore(score + 1);
-    setSelected([...selected, obj]);
-    setCharacters([...characters.filter((char) => char.name !== obj.name)]);
+    setScore(reset ? 0 : score + 1);
+    setSelected(reset ? [] : [...selected, obj]);
+    setCharacters(reset ? charArr : [...characters.filter((char) => char.name !== obj.name)]);
 
     if (score === highScore) setHighScore(highScore + 1);
   };
