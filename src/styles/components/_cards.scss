@@ -7,10 +7,12 @@
   align-items: center;
   max-width: 87.5rem;
   width: 100%;
-  margin-bottom: 4rem;
+  margin-bottom: 5rem;
+  perspective: 125rem;
 }
 
 .card {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -22,6 +24,27 @@
   cursor: pointer;
   font-size: var(--fs-500);
   box-shadow: var(--shadow-primary);
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  transition: transform 150ms ease-in-out;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: var(--bg-image);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: white;
+    border-radius: 1rem;
+    z-index: -1;
+    transform: rotateY(0.5turn);
+    backface-visibility: hidden;
+  }
 
   img {
     object-fit: cover;
