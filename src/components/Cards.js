@@ -1,22 +1,29 @@
 import React, { useState, useEffect } from 'react';
+import { wantedArr, getRandomChars } from '../utilities';
 
 function Cards(props) {
-  const [randomChars, setRandomChars] = useState(props.getRandomChars());
+  const [randomChars, setRandomChars] = useState([]);
+  const [cardBacks, setCardBacks] = useState([]);
   const [canClick, setCanClick] = useState(1);
-  const [firstLoad, setFirstLoad] = useState(1);
+  const { characters, selected } = props;
 
   useEffect(() => {
-    if (!firstLoad) {
-      setTimeout(() => {
-        setRandomChars(props.getRandomChars());
-      }, 1000);
-    }
-  }, [props, firstLoad]);
+    setTimeout(
+      () => {
+        setRandomChars(getRandomChars(characters, selected));
+      },
+      randomChars.length ? 1000 : 0
+    );
+    // eslint-disable-next-line
+  }, [characters, selected]);
+
+  useEffect(() => {
+    setCardBacks(wantedArr.sort(() => Math.random() - 0.5));
+  }, [randomChars]);
 
   const handleClick = (obj) => {
     if (!canClick) return;
 
-    setFirstLoad(0);
     setCanClick(0);
 
     document.querySelectorAll('.card').forEach((element) =>
@@ -31,6 +38,7 @@ function Cards(props) {
           duration: 1000,
           iterations: 2,
           direction: 'alternate',
+          easing: 'ease-in-out',
         }
       )
     );
@@ -44,7 +52,12 @@ function Cards(props) {
   return (
     <div className="card-container">
       {randomChars.map((obj, index) => (
-        <div key={index} className="card" onClick={() => handleClick(obj)}>
+        <div
+          key={index}
+          className="card"
+          onClick={() => handleClick(obj)}
+          style={{ '--bg-image': `url(${cardBacks[index]})` }}
+        >
           <img src={obj.image} alt=""></img>
           <p>{obj.name}</p>
         </div>
