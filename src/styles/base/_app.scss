@@ -3,7 +3,7 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: min-content min-content 1fr;
-  gap: 1rem;
+  gap: 0.5rem;
   margin: 0 auto;
 
   &::after {
