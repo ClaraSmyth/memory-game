@@ -1,6 +1,6 @@
 import backgroundVideo from './assets/background.mp4';
 import backgroundImage from './assets/background.png';
-import charArr from './utilities/charArr';
+import { charArr } from './utilities';
 import { useState } from 'react';
 import { Header, Scoreboard, Cards, Footer } from './components/';
 
@@ -18,21 +18,7 @@ function App() {
     setSelected(reset ? [] : [...selected, obj]);
     setCharacters(reset ? charArr : [...characters.filter((char) => char.name !== obj.name)]);
 
-    if (score === highScore) setHighScore(highScore + 1);
-  };
-
-  const getRandomChars = () => {
-    const arr1 = [...selected.sort(() => Math.random() - 0.5)];
-    const arr2 = [...characters.sort(() => Math.random() - 0.5)];
-
-    const newArray = [];
-
-    while (newArray.length < 4) {
-      if (arr1.length) newArray.push(arr1.pop());
-      if (arr2.length) newArray.push(arr2.pop());
-    }
-
-    return newArray.sort(() => Math.random() - 0.5);
+    if (score === highScore && !reset) setHighScore(highScore + 1);
   };
 
   return (
@@ -41,7 +27,7 @@ function App() {
 
       <Scoreboard score={score} highScore={highScore} />
 
-      <Cards getRandomChars={getRandomChars} onSelection={onSelection} />
+      <Cards characters={characters} selected={selected} onSelection={onSelection} />
 
       <Footer />
 
