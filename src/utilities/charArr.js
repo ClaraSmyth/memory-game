@@ -6,7 +6,7 @@ const images = importAll(require.context('../assets/character-images/', false, /
 
 const charArr = images.map((path) => {
   return {
-    name: path.split(/[., /]/)[3],
+    name: path.split(/[., /]/)[4],
     image: path,
   };
 });
