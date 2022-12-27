@@ -2,12 +2,13 @@
   justify-self: center;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
+  gap: 1.5rem;
   justify-items: center;
   align-items: center;
   max-width: 87.5rem;
   width: 100%;
   perspective: 125rem;
+  padding: 0rem 1rem;
 }
 
 .card {
@@ -19,7 +20,7 @@
   max-width: 14rem;
   aspect-ratio: 1;
   background-color: var(--bg-transparent);
-  padding: 0.8rem;
+  padding: 4%;
   border-radius: 1rem;
   cursor: pointer;
   font-size: var(--fs-500);
@@ -30,9 +31,11 @@
   transition: transform 150ms ease-in-out;
   will-change: transform;
 
-  &:hover,
-  &:focus {
-    transform: translateY(-1rem);
+  @media (hover: hover) and (pointer: fine) {
+    &:hover,
+    &:focus-visible {
+      transform: translateY(-1rem);
+    }
   }
 
   &::after {
@@ -59,7 +62,13 @@
 
   p {
     line-height: 1;
-    padding-top: 0.8rem;
+    padding-top: 4%;
     font-size: var(--fs-500);
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
