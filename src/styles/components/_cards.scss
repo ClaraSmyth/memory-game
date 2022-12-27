@@ -1,13 +1,13 @@
 .card-container {
   justify-self: center;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, minmax(13.125rem, 1fr));
+  grid-template-rows: minmax(17.5rem, 1fr);
   gap: 1rem;
   justify-items: center;
   align-items: center;
   max-width: 87.5rem;
   width: 100%;
-  margin-bottom: 5rem;
   perspective: 125rem;
 }
 
