@@ -1,6 +1,6 @@
 :root {
-  --fs-400: 1.2rem;
-  --fs-500: 1.4rem;
+  --fs-400: clamp(0.9rem, 0.6rem + 1.6vw, 1.2rem);
+  --fs-500: clamp(1rem, 0.6rem + 2.133vw, 1.4rem);
 
   --bg-transparent: hsl(0 0% 100% / 0.7);
 
