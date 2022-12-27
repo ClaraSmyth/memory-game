@@ -6,7 +6,7 @@ function Footer(props) {
     <div className="footer">
       <button
         className="footer-btn"
-        canPlayAudio={props.canPlayAudio}
+        canplayaudio={props.canPlayAudio}
         onClick={() => props.setCanPlayAudio((prev) => (prev === 0 ? 1 : 0))}
       >
         <BsMusicNote />
