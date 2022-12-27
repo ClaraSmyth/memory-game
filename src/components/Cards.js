@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { wantedArr, getRandomChars } from '../utilities';
+import sound from '../assets/sound-effects/card-flip.mp3';
 
 function Cards(props) {
   const [randomChars, setRandomChars] = useState([]);
@@ -7,10 +8,13 @@ function Cards(props) {
   const [canClick, setCanClick] = useState(1);
   const { characters, selected } = props;
 
+  const audioClip = new Audio(sound);
+
   useEffect(() => {
     setTimeout(
       () => {
         setRandomChars(getRandomChars(characters, selected));
+        audioClip.play();
       },
       randomChars.length ? 1000 : 0
     );
@@ -44,6 +48,7 @@ function Cards(props) {
     );
 
     props.onSelection(obj);
+    audioClip.play();
 
     setTimeout(() => {
       setCanClick(1);
