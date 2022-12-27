@@ -23,13 +23,16 @@
   border-radius: 1rem;
   cursor: pointer;
   font-size: var(--fs-500);
+  transform: scale(1);
   box-shadow: var(--shadow-primary);
   transform-style: preserve-3d;
   backface-visibility: hidden;
-  transition: transform 150ms ease-in-out;
+  transition: width 150ms ease-in-out;
+  will-change: transform, width, height;
 
-  &:hover {
-    transform: scale(1.05);
+  &:hover,
+  &:focus {
+    width: 12.5rem;
   }
 
   &::after {
