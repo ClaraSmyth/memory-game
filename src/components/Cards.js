@@ -6,15 +6,18 @@ function Cards(props) {
   const [randomChars, setRandomChars] = useState([]);
   const [cardBacks, setCardBacks] = useState([]);
   const [canClick, setCanClick] = useState(1);
-  const { characters, selected } = props;
+  const { characters, selected, canPlayAudio } = props;
 
   const audioClip = new Audio(sound);
+  const playAudioClip = () => {
+    if (canPlayAudio) audioClip.play();
+  };
 
   useEffect(() => {
     setTimeout(
       () => {
         setRandomChars(getRandomChars(characters, selected));
-        audioClip.play();
+        playAudioClip();
       },
       randomChars.length ? 1000 : 0
     );
@@ -48,7 +51,7 @@ function Cards(props) {
     );
 
     props.onSelection(obj);
-    audioClip.play();
+    playAudioClip();
 
     setTimeout(() => {
       setCanClick(1);

@@ -9,6 +9,7 @@ function App() {
   const [selected, setSelected] = useState([]);
   const [score, setScore] = useState(0);
   const [highScore, setHighScore] = useState(0);
+  const [canPlayAudio, setCanPlayAudio] = useState(1);
 
   const onSelection = (obj) => {
     // Check if game should be reset
@@ -27,9 +28,9 @@ function App() {
 
       <Scoreboard score={score} highScore={highScore} />
 
-      <Cards characters={characters} selected={selected} onSelection={onSelection} />
+      <Cards characters={characters} selected={selected} onSelection={onSelection} canPlayAudio={canPlayAudio} />
 
-      <Footer />
+      <Footer canPlayAudio={canPlayAudio} setCanPlayAudio={setCanPlayAudio} />
 
       <video id="background-video" autoPlay loop muted playsInline poster={backgroundImage}>
         <source src={backgroundVideo} type="video/mp4" />
