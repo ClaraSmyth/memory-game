@@ -1,8 +1,7 @@
 .card-container {
   justify-self: center;
   display: grid;
-  grid-template-columns: repeat(4, minmax(13.125rem, 1fr));
-  grid-template-rows: minmax(17.5rem, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
   justify-items: center;
   align-items: center;
@@ -16,7 +15,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 12rem;
+  width: 100%;
+  max-width: 14rem;
   aspect-ratio: 1;
   background-color: var(--bg-transparent);
   padding: 0.8rem;
@@ -27,12 +27,12 @@
   box-shadow: var(--shadow-primary);
   transform-style: preserve-3d;
   backface-visibility: hidden;
-  transition: width 150ms ease-in-out;
-  will-change: transform, width, height;
+  transition: transform 150ms ease-in-out;
+  will-change: transform;
 
   &:hover,
   &:focus {
-    width: 12.5rem;
+    transform: translateY(-1rem);
   }
 
   &::after {
