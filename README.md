@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+<div  align=center>
+	<h1>Memory Game
+	<br>
+        <img src="https://img.shields.io/static/v1?label=&message=REact&color=61DAFB&style=for-the-badge&logo=REact&logoColor=black&logoWidth=&labelColor=&link=">
+		<img src="https://img.shields.io/static/v1?label=&message=SASS&color=CC6699&style=for-the-badge&logo=sass&logoColor=FFF&logoWidth=&labelColor=&link=">
+		<br>
+	</h1>
+	<h3><b><a href="#">View Live Demo</a></b></h3>
+</div>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Gif of Project](./readme-assets/Images/memory-game.gif)
 
-## Available Scripts
+## Description
 
-In the project directory, you can run:
+This project is a Memory Game created as part of [TheOdinProject](https://www.theodinproject.com) curriculum.
 
-### `npm start`
+To see the assignment details - [Click Here](https://www.theodinproject.com/lessons/node-path-javascript-memory-card)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Built Using
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- React <img src="./readme-assets/react.svg">
+- SASS <img src="./readme-assets/sass.svg">
 
-### `npm test`
+#### Other tools used
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- ESLint <img src="./readme-assets/eslint.svg">
+- Prettier <img src="./readme-assets/prettier.svg">
 
-### `npm run build`
+## Credits
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### Icons
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- [React Icons](https://github.com/react-icons/react-icons)
+- [Bootstrap Icons](https://github.com/twbs/icons)
+- [Simple Icons](https://simpleicons.org/)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### Images
 
-### `npm run eject`
+- Character & Wanted Images - [Fandom One Piece Wiki](https://onepiece.fandom.com/wiki/One_Piece_Wiki)
+- Going Merry Animated Background - [Reddit User u/laxusdreyarligh](https://www.reddit.com/r/OnePiece/comments/j8mctl/i_animated_a_going_merry_wallpaper/)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+#### Sounds
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Card Flip Sound Effect - [Pixabay User Splashdust](https://pixabay.com/hu/sound-effects/flipcard-91468/)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Gallery
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+#### Desktop
 
-## Learn More
+![Image of Project](./readme-assets/Images/desktop.png)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### Mobile
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![Image of Project](./readme-assets/Images/mobile.png)
