@@ -5,7 +5,7 @@
 		<img src="https://img.shields.io/static/v1?label=&message=SASS&color=CC6699&style=for-the-badge&logo=sass&logoColor=FFF&logoWidth=&labelColor=&link=">
 		<br>
 	</h1>
-	<h3><b><a href="#">View Live Demo</a></b></h3>
+	<h3><b><a href="https://clarasmyth.github.io/memory-game/">View Live Demo</a></b></h3>
 </div>
 
 ![Gif of Project](./readme-assets/Images/memory-game.gif)
