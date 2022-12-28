@@ -47,6 +47,7 @@
     background-size: cover;
     background-color: white;
     border-radius: 1rem;
+    border: 0.25rem solid var(--bg-wanted);
     z-index: -1;
     transform: rotateY(0.5turn);
     backface-visibility: hidden;
