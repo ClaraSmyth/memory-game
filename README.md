@@ -51,4 +51,4 @@ To see the assignment details - [Click Here](https://www.theodinproject.com/less
 
 #### Mobile
 
-<img src="./readme-assets/Images/mobile.png" width="200px">
+<img src="./readme-assets/Images/mobile.png" width="350px">
