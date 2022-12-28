@@ -3,14 +3,15 @@ import { wantedArr, getRandomChars } from '../utilities';
 import sound from '../assets/sound-effects/card-flip.mp3';
 
 function Cards(props) {
+  const { characters, selected, canPlayAudio } = props;
   const [randomChars, setRandomChars] = useState([]);
   const [cardBacks, setCardBacks] = useState([]);
   const [canClick, setCanClick] = useState(1);
-  const { characters, selected, canPlayAudio } = props;
+  const [firstLoad, setFirstLoad] = useState(1);
 
   const audioClip = new Audio(sound);
   const playAudioClip = () => {
-    if (canPlayAudio) audioClip.play();
+    if (canPlayAudio && !firstLoad) audioClip.play();
   };
 
   useEffect(() => {
@@ -18,6 +19,7 @@ function Cards(props) {
       () => {
         setRandomChars(getRandomChars(characters, selected));
         playAudioClip();
+        setFirstLoad(0);
       },
       randomChars.length ? 1000 : 0
     );
