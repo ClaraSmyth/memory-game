@@ -12,7 +12,7 @@
 
 ## Description
 
-This project is a Memory Game created as part of [TheOdinProject](https://www.theodinproject.com) curriculum.
+This project is a Memory Game based on characters from the anime One Piece created as part of [TheOdinProject](https://www.theodinproject.com) curriculum.
 
 To see the assignment details - [Click Here](https://www.theodinproject.com/lessons/node-path-javascript-memory-card)
 
